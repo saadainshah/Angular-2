@@ -6,6 +6,7 @@ var message = 'Hello World';
 log(message);
 
 
+
 function doSomething(){
         for(let i=0; i<5; i++){
            console.log(i);
@@ -41,7 +42,7 @@ let backgroundColor = Color.Red;
 */
 //to tell the intellisense that message is not an object but 
 // rather a string, we use "type assertion".  
-var message1;
-message1 = 'abc';
-var endsWithC2 = message1.endsWith('c');
-var alternateiveWay2 = message1.endsWith('c');
+// let message1;
+// message1 = 'abc';
+// let endsWithC2 = (<string>message1).endsWith('c');
+// let alternateiveWay2 = (message1 as string).endsWith('c'); 
