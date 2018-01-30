@@ -193,10 +193,6 @@ a valid JS code
 
 We will always use 'let' keywrod
 
-uploading changes
-
-when ever I want
-
 
  
 
