@@ -1,6 +1,3 @@
-import { read } from "fs";
-
-
 // function log(message){
 //     console.log(message);
 // }
@@ -187,30 +184,42 @@ import { read } from "fs";
     
 
 
-//Properties
- class Point{
-    constructor(private x?: number, private y?:number){
-    }
-    draw(){
-        console.log('X: ' + this.x + ', Y: ' + this.y );
-        // ...
-    }
+// //Properties
+//  class Point{
+//     constructor(private _x?: number, private _y?:number){
+//     }
+//     draw(){
+//         console.log('X: ' + this._x + ', Y: ' + this._y );
+//         // ...
+//     }
 
-    getX(){
-        return this.x;
-    }
+//     get x(){
+//         return this._x;
+//     }
 
-    setX(value){
-        if(value < 0){
-            throw new Error ('value cannot be less than 0.');
-        }
-        this.x = value;
-    }
+//     set x(value){
+//         if(value < 0){
+//             throw new Error ('value cannot be less than 0.');
+//         }
+//         this._x = value;
+//     }
 
-}
+// }
 
-let point = new Point (1,2);
-let x = point.getX();
-point.setX(10);
-point.x = 10;
-point.draw();
+// let point = new Point (1,2);
+// // let x = point.getX(); // old way of getter
+// let x = point.x; // new way of getter
+// // point.setX(10); // old way of setter
+// point.x = 10; // old way of getter
+// point.draw();
+
+
+// Modularity Concept
+    // exporting - you can export function/classes/variables etc
+    // importing - you can import @angular/core lib and evrything etc
+// import{Point, a, b,c}
+// import { Point } from './point'
+// import { Point } from '@angular/core'
+
+// let point = new Point (1,2);
+// point.draw();
