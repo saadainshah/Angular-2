@@ -177,9 +177,9 @@
 //         console.log('X: ' + this.x + ', Y: ' + this.y );
 //         // ...
 //     }
-//     // getDistance = (another: Point) => {
-//     //     //..
-//     // }
+//     getDistance = (another: Point) => {
+//          //..
+//     }
 // }
     
 
@@ -210,7 +210,7 @@
 // // let x = point.getX(); // old way of getter
 // let x = point.x; // new way of getter
 // // point.setX(10); // old way of setter
-// point.x = 10; // old way of getter
+// point.x = 10; // new way of getter
 // point.draw();
 
 
@@ -223,3 +223,4 @@
 
 // let point = new Point (1,2);
 // point.draw();
+
