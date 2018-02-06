@@ -194,6 +194,34 @@ a valid JS code
 We will always use 'let' keywrod
 
 
+Angular Building Blocks
+Components
+Templates
+Directives
+Services
+
+Components - encapsulate the Data, HTML template, and logic for view
+
+e.g
+Udemy - Nav bar, Sidebar, Courses - think of it as maintainable and reuseable code little Components
+Courses can be further broken down into Cpurse compoent - broken further into Rating component which can be used for other
+apps
+
+Every application has 1 App or root component - tree component
+
+Modular - Container or group of related Components - every app has 1 app module (app.module.ts) - as app grows module grows 
+eg: 
+1) Courses - contains all related courses components 
+2) Messaging - contains all messaging compoenents
+3) Insutrcitr
+4) Admin
+
+Creating Components
+1) Create a Components
+2) Register it in a module
+3) Add an element in HTML markup
+
+
  
 
 
