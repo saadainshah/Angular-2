@@ -13,7 +13,9 @@ import { CoursesService } from './courses.service';
     // template:'<h2>{{"Title:" + title}}</h2>' // render something in template dynamically. value will be 
     // updated at run-time. 
     // Directive - each course is a variable and courses is name of array it will iterate through.
-    // String interpolation - {{courses}}
+    // String interpolation - {{courses}} -- these CURLY braces are called interpolation
+    // <img src="{{ imageUrl }}"/>
+
     template:`
         <h2>{{ getTitle() }}</h2>
         <ul>
@@ -21,11 +23,20 @@ import { CoursesService } from './courses.service';
                 {{course}}
             </li>
         </ul>
+        <img [src] = "imageUrl" />
+        <table>
+            <tr>
+                <td [attr.colspan]="colSpan"></td>
+            </tr>
+        </table>
+        <button class="btn btn-primary">Save</button>
         `  
 })
 export class CoursesComponent{
     title = "List of Math Courses";
     courses;
+    imageUrl = "http://lorempixel.com/400/200";
+    colSpan = 2;
 
     // Here we will not have any logic for consuming HTTP Service - allows to unit test the class by not mkaing it dependant 
     // upon HTTP Endpoint

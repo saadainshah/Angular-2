@@ -250,7 +250,38 @@ those dependencies into the constructor - and this is called Dependecny Injectio
 Generating Services using Angular cli - ng g s <name of service>
 
 @Injectable() - declarative function - Only if this service has dependencies in the constructor. Angular should be able to inject dependencies in the class using the constructor
- 
+
+***Displaying Data and Handling Events**
+Property Binding:
+Behind the scenes, Angular compiles the interpolation into Property Binding. We bind a property of a DOM element
+to a element in the component. Eg src to ImageURL in the coursecomponent
+String Interpolation - used for Text on screen
+
+Property Binding works one way. From property to DOM. Any change in component, DOM will change. But any change in
+DOM will not change Component
+        <img src="{{ imageUrl }}"/>
+        <img [src] = "imageUrl" /> 
+
+Attribute Binding:
+Document Object Model (DOM). Is a model of objects that demonstrates a tree of object in memory. When browser parses
+the HTML doc, it creates a tree of objects in memory i.e called DOM. 
+Vs
+html - is a mark up language to represent DOM in text. 
+
+Most attributes in HTML have a one-one mapping in DOM. Whereas there are few exceptions and one of them is colspan
+exception: 
+colspan doesnt have mapping in DOM.
+ <td [colspan]="colSpan"></td> doesnt have a property in DOM
+
+ how to treat exceptions:
+ <td [attr.colspan]="colSpan"></td> -- Adding attr
+
+Adding Bootstrap: npm install bootstrap --save (THis installs bootstrap to node package manager)
+If you are checking out source code. Just do npm install and it will download all dependencies for you.
+
+npm install bootstrap@3.3.7 --save (adding bootstrap)
+
+Class Binding:
 
 
 
