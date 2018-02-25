@@ -1,0 +1,259 @@
+Angular (2+)
+
+What is Angular ? A fraework for building client applications in HTML/CSS/JS/TS
+Why we need Angular ? better structure complex apps
+Benefits
+- Gives our applications a clean structure
+- includes a lot of re-useable code
+- Makes our code testable
+
+Architecture
+
+Front-End 		Back-End
+(UI)			(Data and Processing)
+html			data + APIs
+css			Business Logic
+TS/Angular		Databases
+Presentation Logic
+
+
+you dont save data on front-end - you store it in back-end/server because user can clear cache etc
+
+HTTP Services/APIs (API - application programming interface)
+Endpoints that are accessible via the HTTP Protocol
+
+
+Setting up enviornment
+1. install node js - npm package
+	Need node js bcz it provides runtime enviornment javascript
+2. check with node --version
+3. Node Package Manager - npm install -g @angular/cli (ran the command twice and it worked)
+	need angular cli (3rd party library) - to create deployable packages & boilerplate code & angular api
+	"-g"  stands for global (IMP bcz it makes it accessible everywhere in your computer. skipping g will 
+	make it accessbile only in the current folder)
+	@angulat/cli - name of the package
+5. ng --version (for confimring installation of angular/cli package)
+6. ng new hello-world (creating a new angular app)
+7. ctrl + shift + p -> type code to add code to command path
+8. in the current folder -> code .
+9. ng -serve (load application on web server) 
+10.localhost:4200 on browser for running app on chrome
+11. e2e folder -> end-to-end where you write end to end testing - automate testing
+12. node_modules -> store 3rd party libraries - purely for development -- when we compile the 3rd party
+	 libraries are bundled and deployed with the app
+13. app folder - every app has 1 module and 1 component
+14. assets - all static assets eg images/icons etc
+15. enviornment - configuration settings for env such as PROD, DEV etc
+16. index.html - html file
+17. main.ts - starting point of our app (main method) - bootstraping our app module
+18. pollyfils - imports JS scripts that are required to run the app. Fill the gaps between the features of JS that angular needs
+	 and the features supported by current browsers
+19. styles.css- global styles
+20. test.ts - for setting up the testing env
+21. .angulat-cli.json - standard configuration file - st
+22. .editorconfig - all teammembers in the team are using the same editor settings 
+23. .gitignore - excluding git files that you dont need to upload to github
+24. karma.conf.js - config file - test runner for JS code
+25. package.json - standard file that every node project has - 
+		dependecies - libraries on which your app is dependent on.if you arent using animations in your project, 
+		you can delete the library if yuou like 
+		devdependencies - developer dependencies not for prod
+26. protactor.conf.js - tool for running e2e tests
+27. tsconfig.json - converts typesript to JS code for browser - config for TS compiler
+28. tslint.json - static TS editor that checks code for readability, scalability and maintainaibility
+
+
+Webpack- built automation tool - gets all CSS/scripts bundles and compiles - for optimization
+pollyfills.bundle.js - fills the gap between JS features angular needs vs the features that are on current browsers
+main.bundle.js - all source code
+styles.bundle.js - all style sheets
+vendor.bundle.js - vendor bundle - 3rd party libraries
+inline.bundle.js - 
+
+Hot Module Replacement (HMR)
+Any source file is change - the angulat app is auto-refereshed
+
+All the aforementioned bundles are injected in the index.html at run time.
+
+
+All typescript files are converted to JS bundles
+
+Angular JS (2010)
+
+complete re-write
+Angular 2 (2016)
+what happened to angular 3
+
+Angular Libraries
+following libraries are distributed differently in npm 
+@angular/core - 2.3.0 - every app has it 
+@angular/compiler - 2.3.0
+@angular/http - 2.3.0 - calling http services
+@angular/router ** 3.3.0 
+
+all libraries versioned the same except for router and in 
+order to align all of them they jumped to version 4 Angular 4
+
+Terminology wise
+Angular JS (1.X)
+OR
+Angular (2+) - word only Angular
+
+
+***Syllabus**
+Fundamentals of TypeScript and OOP
+Angular fundamentals
+Displaying data and handling events
+Components
+Directives
+Template-driven forms
+Reactive forms (Optional)
+Consuming HTTP Services (Optional)
+Routing and navigation
+Authentication and Authorization (Optional)
+Deployment
+Building real-time, serverless applications with Firebase
+
+Advanced Topics
+Animations
+Angular Material
+Redux Architecture
+Unit Testing
+Integration Testing
+
+Firebase as Back-end
+1. essentials then final project
+
+
+TypeScript
+-Type annotations
+- Arrow functions
+- Interfaces
+- Classes 
+- Constructors
+- Access Modifiers
+- Properties
+- Modules
+
+
+What is TypeScript? any valid JS is also TS
+- Superset of JS 
+- Strong/Static Typing
+- OOP features
+- Compile-time errors
+- Great tooling
+
+bowsers dont understand Ts so we need to convert TS to JS
+TS -> (transpile) -> JS
+
+
+- npm install -g typescript (installing TS gloablly on our machine)
+- tsc (typescript compiler)
+- tsc --version
+- mkdir ts-hello
+- cd ts-hello
+- code main.ts (creates a main TS file)
+- to transpile TS file to JS file we use tsc compiler
+- tsc main.ts (will convert TS file to JS file)
+- this tranpilation happens under the hood.
+-- ng serve does it for you, no need to to do tsc main.ts
+- 
+- node main.js (alternate to executing the code)
+
+
+Variable Declaration
+1. var number = 1;
+2. let count = 2;
+
+
+JS Versions
+ES5 (ECMAScript 5): supported by all browsers
+ES6 (2015) - ECMA team which is responsible for extending JS is also ES6
+ES 2016 - named after years
+ES 2017
+
+problem 
+tsc main.ts | node main.js (running hello world)
+
+
+function doSomething() {
+    for (var i = 0; i < 5; i++) {
+        console.log(i);
+    }
+    console.log('Finally: ' + i);
+}
+doSomething();
+
+var keyword declared is scoped to the nearest function
+* the i varaiable should be only scoped withing the for but 
+its scoped outside of for and anywhere wihting the function when we use JS 'var' declaration.
+
+even though tsc compiler complains about the TS code i.e of using let but it still generates 
+a valid JS code
+
+We will always use 'let' keywrod
+
+
+Angular Building Blocks
+Components
+Templates
+Directives
+Services
+
+Components - encapsulate the Data, HTML template, and logic for view
+
+e.g
+Udemy - Nav bar, Sidebar, Courses - think of it as maintainable and reuseable code little Components
+Courses can be further broken down into Course compoent - broken further into Rating component which can be used for other
+apps
+
+Every application has 1 App or root component - tree component
+
+Modular - Container for group of related Components - every app has 1 app module (app.module.ts) - as app grows module grows 
+eg: 
+1) Courses - contains all related courses components 
+2) Messaging - contains all messaging compoenents
+3) Instructor
+4) Admin
+
+Creating Components
+1) Create a Components
+2) Register it in a module
+3) Add an element in HTML markup
+
+For creating a component through a terminal. ng g c course (where g is generate and c is component)
+
+Templates:
+--Data-Binding: value of 'title' fields changes, it updates the template value automatically. We are binding our
+field and view together. The view gets updated and changes if the field is changed
+--String Interpolation: getTitle() 
+
+Directives:
+Angular Building Block - We use directives to manipulate the DOM - add/remove or edit the DOM element.
+A directive that That modifies the DOM, you should prefix it with *. 
+
+Services:
+Getting list of courses from HTTP Services
+Service is a plain TS class. There is no @component needed.
+Putting http logic in service allows to 
+
+Dependency Injection: injecting dependencies in the constructor. When Angular creates an instance of an object in its parameter inside the constructor 
+it can inject in the dependencies as well. For that we need to register the dependencies in the App module.
+
+
+Singleton Pattern - If we have a single dependecny/Service being used by multiple Components then only one instance will be created
+and used by other components. So, only a single instance of the object stays in the memory
+
+When Angular will create an instance of the compoenent, it will first create an instance of the dependencies and then inject
+those dependencies into the constructor - and this is called Dependecny Injection.
+
+Generating Services using Angular cli - ng g s <name of service>
+
+@Injectable() - declarative function - Only if this service has dependencies in the constructor. Angular should be able to inject dependencies in the class using the constructor
+ 
+
+
+
+
+
+
